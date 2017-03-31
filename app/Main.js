@@ -54,12 +54,8 @@ const styles = StyleSheet.create({
     },
 });
 
-export default connect((state) => {
-    console.log('connect');
-    console.log(state);
-    return ({
-        params: state.test.params,
-    })
-}, dispatch => ({
+export default connect((state) => ({
+    params: state.test.params,
+}), dispatch => ({
     actions: bindActionCreators(test, dispatch),
 }))(Main)
