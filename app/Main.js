@@ -22,7 +22,7 @@ export class Main extends Component {
                 <Button
                     style={styles.welcome}
                     onPress={() => {
-                        actions.test();
+                        actions.test(params);
                     }}
                     title='Test'
                 />
